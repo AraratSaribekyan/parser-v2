@@ -1,0 +1,428 @@
+{
+    "top":{
+        "style":{
+            "Casual_Formal":[],
+            "Sport":[],
+            "Casual_Sport":[],
+            "Formal": []
+        },
+
+        "length":{
+            "Cropped":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&length=extra---short&sale=true", "https://www.zalando.co.uk/womens-clothing-tops-t-shirts-sale/?camp=uk_eoss_wave_2&length=extra---short&sale=true"],
+            "Long":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&length=extra---long.long&sale=true", "https://www.zalando.co.uk/womens-clothing-tops-t-shirts-sale/?camp=uk_eoss_wave_2&length=extra---long.long&sale=true"]
+        },
+
+        "sleeve":{
+            "Tank":[],
+            "Sleeveless":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&sale=true&sleeves=sleeveless", "https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&sale=true&sleeves=strapless"],
+            "Cami":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&sale=true&sleeves=spaghetti-straps"],
+            "3/4":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&sale=true&sleeves=3-4-length", "https://www.zalando.co.uk/womens-clothing-tops-t-shirts-sale/?camp=uk_eoss_wave_2&sale=true&sleeves=3-4-length", "https://www.zalando.co.uk/womens-clothing-tops-polo-shirts-sale/?camp=uk_eoss_wave_2&sale=true&sleeves=3-4-length"],
+            "Long":[]
+        },
+
+        "neckline":{
+            "V-neck": ["https://www.zalando.co.uk/womens-clothing-tops-t-shirts/?camp=uk_eoss_wave_2&sale=true&shirt_collar=v-neck", "https://www.zalando.co.uk/womens-clothing-tops-tops/?camp=uk_eoss_wave_2&sale=true&shirt_collar=v-neck", "https://www.zalando.co.uk/womens-clothing-tops-tops/?camp=uk_eoss_wave_2&sale=true&shirt_collar=low-cut-v-neck", "https://www.zalando.co.uk/womens-clothing-tops-tops/?camp=uk_eoss_wave_2&sale=true&shirt_collar=cache-coeur"],
+            "Open":[],
+            "Collar":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&sale=true&shirt_collar=polo-shirt", "https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&sale=true&shirt_collar=shirt-collar"],
+            "Henley":[],
+            "Square":["https://www.zalando.co.uk/womens-clothing-tops-tops/?camp=uk_eoss_wave_2&sale=true&shirt_collar=square-neck", "https://www.zalando.co.uk/womens-clothing-tops-t-shirts/?camp=uk_eoss_wave_2&sale=true&shirt_collar=square-neck"]
+        },
+
+        "pattern":{
+            "Striped":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&pattern=striped&sale=true", "https://www.zalando.co.uk/womens-clothing-tops-t-shirts-sale/?camp=uk_eoss_wave_2&pattern=striped&sale=true"],
+            "Patterned":[],
+            "Floral":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&pattern=floral&sale=true", "https://www.zalando.co.uk/womens-clothing-tops-t-shirts-sale/?camp=uk_eoss_wave_2&pattern=floral&sale=true"],
+            "Tartan":[],
+            "Leather":[],
+            "Animal":["https://www.zalando.co.uk/womens-clothing-tops-tops-sale/?camp=uk_eoss_wave_2&pattern=animal-print&sale=true", "https://www.zalando.co.uk/womens-clothing-tops-t-shirts-sale/?camp=uk_eoss_wave_2&pattern=animal-print&sale=true"],
+            "Knitted":[]
+        }
+    },
+
+    "shirt":{
+        "sleeve":{
+            "Short":[]
+        },
+
+        "neckline":{
+            "Rounded":[],
+            "Henley":[],
+            "V-neck":[],
+            "High":[],
+            "Collar":[]
+        },
+
+        "collar":{
+            "Wide":[],
+            "None":[],
+            "Buttoned":[],
+            "Butterfly":[]
+        },
+
+        "pattern":{
+            "Tartan":[],
+            "Floral":[],
+            "Patterned":[],
+            "Striped":[],
+            "Military":[],
+            "Leather":[],
+            "Knitted":[],
+            "Animal":[],
+            "Graphic":[],
+            "Suede":[],
+            "Denim":[]
+        }
+    },
+
+    "pullover":{
+        "sleeve":{
+            "Long":[]
+        },
+
+        "pattern":{
+            "Plain":[],
+            "Graphic":[],
+            "Patterned":[],
+            "Knitted":[]
+        },
+
+        "neckline":{
+            "High":[],
+            "Rounded":[],
+            "Hoodie":[],
+            "V-neck":[]
+        },
+
+        "style":{
+            "Casual":[],
+            "Casual_Formal":[],
+            "Casual_Sport":[]
+        },
+
+        "length":{
+            "Regular":[]
+        }
+    },
+
+    "cardigan":{
+        "length":{
+            "Long":[],
+            "Short":[]
+        },
+
+        "season":{
+            "Summer":[]
+        },
+
+        "sleeve":{
+            "3/4":[],
+            "short":[],
+            "Sleeveless":[]
+        },
+
+        "pattern":{
+            "Quilted":[],
+            "Floral":[],
+            "Striped":[],
+            "Patterned":[],
+            "Tartan":[],
+            "Fur":[],
+            "Animal":[],
+            "Leather":[],
+            "Graphic":[]
+        },
+
+        "style":{
+            "Sport":[],
+            "Casual_Formal":[],
+            "Formal":[],
+            "Casual_Sport":[]
+            }
+    },
+
+    "outwear":{
+        "sleeve":{
+            "Long":[],
+            "3/4":[],
+            "Sleeveless":[]
+        },
+
+        "pattern":{
+            "Fur":[],
+            "Denim":[],
+            "Plain":[],
+            "Tartan":[],
+            "Graphic":[],
+            "Quilted":[],
+            "Leather":[],
+            "Animal":[],
+            "Floral":[],
+            "Knitted":[],
+            "Patterned":[],
+            "Striped":[]
+        },
+
+        "neckline":{
+            "Lapel":[],
+            "Hood":[],
+            "Standing":[],
+            "Collar":[]
+        },
+
+        "length":{
+            "Regular":[],
+            "Short":[],
+            "Long":[]
+        },
+
+        "season":{
+            "Winter":[],
+            "Summer":[]
+        },
+
+        "style":{
+            "Casual_Sport":[],
+            "Casual":[],
+            "Casual_Formal":[],
+            "Formal":[]
+        }
+    },
+
+    "jacket":{
+        "length":{
+            "Cropped":[],
+            "Long":[]
+        },
+
+        "style":{
+            "Casual_Sport":[]
+        },
+
+        "neckline":{
+            "Standing":[],
+            "Open":[],
+            "Rounded":[],
+            "V-neck":[],
+            "Collar":[]
+        },
+
+        "type":{
+            "Vest":[]
+        },
+
+        "pattern":{
+            "Military":[],
+            "Quilted":[],
+            "Floral":[],
+            "Striped":[],
+            "Patterned":[],
+            "Fur":[],
+            "Knitted":[],
+            "Animal":[],
+            "Leather":[],
+            "Denim":[],
+            "Graphic":[]
+        },
+
+        "sleeve":{
+            "3/4":[],
+            "Short":[],
+            "Sleeveless":[]
+        }
+    },
+
+    "pants":{
+        "length":{
+            "Regular":[],
+            "Capri":[]
+        },
+
+        "pattern":{
+            "Quilted":[],
+            "Graphic":[],
+            "Tartan":[],
+            "Plain":[],
+            "Striped":[],
+            "Patterned":[],
+            "Floral":[],
+            "Animal":[],
+            "Leather":[]
+        },
+
+        "fit":{
+            "Wide":[],
+            "Joggers":[],
+            "Skinny":[],
+            "Regular":[]
+        },
+
+        "style":{
+            "Casual_Formal":[],
+            "Formal":[],
+            "Casual":[],
+            "Casual_Sport":[],
+            "Sport":[]
+        }
+    },
+
+    "jeans":{
+        "fit":{
+            "Skinny":[],
+            "Wide":[],
+            "Regular":[]
+        },
+
+        "type":{
+            "Worn":[],
+            "Ripped":[]
+        },
+
+        "length":{
+            "Capri":7
+        },
+
+        "pattern":{
+            "Striped":[],
+            "Denim":[],
+            "Plain":[],
+            "Graphic":[],
+            "Animal":[],
+            "Quilted":[],
+            "Patterned":[]
+        }
+    },
+
+    "dress":{
+        "type":{
+            "Pleated":[],
+            "Ruffle":[]
+        },
+
+        "length":{
+            "Long":[],
+            "Short":[],
+            "Regular":[]
+        },
+
+        "pattern":{
+            "Floral":[],
+            "Striped":[],
+            "Patterned":[],
+            "Tartan":[],
+            "Leather":[],
+            "Animal":[],
+            "Knitted":[],
+            "Denim":[],
+            "Graphic":[]
+        },
+
+        "neckline":{
+            "Standing":[],
+            "V-neck":[],
+            "Rounded":[],
+            "Open":[],
+            "Collar":[],
+            "Square":[]
+        },
+
+        "sleeve":{
+            "Sleeveless":[],
+            "Tank":[],
+            "Cami":[],
+            "3/4":[],
+            "Short":[],
+            "Long":[]
+        },
+
+        "style":{
+            "Casual_Formal":[],
+            "Festive":[],
+            "Sport":[]
+        }
+    },
+
+    "shorts":{
+        "pattern":{
+            "Patterned":[],
+            "Denim":[],
+            "Plain":[],
+            "Tartan":[]
+        },
+
+        "fit":{
+            "Regular":[],
+            "Wide":[]
+        },
+
+        "length":{
+            "Long":[],
+            "Regular":[]
+        },
+
+        "style":{
+            "Casual_Formal":[],
+            "Sport":[],
+            "Casual_Sport":[],
+            "Casual":[]
+        }
+    },
+
+    "skirt":{
+        "pattern":{
+            "Denim":[],
+            "Plain":[],
+            "Tartan":[],
+            "Graphic":[],
+            "Leather":[],
+            "Quilted":[],
+            "Floral":[],
+            "Striped":[],
+            "Patterned":[]
+        },
+
+        "style":{
+            "Formal":[],
+            "Casual":[],
+            "Casual_Formal":[]
+        },
+
+        "length":{
+            "Midi":[],
+            "Maxi":[],
+            "Mini":[]
+        },
+
+        "fit":{
+            "Plisse":[],
+            "Circle":[],
+            "Pencil":[]
+        }
+    },
+
+    "suit":{
+        "style":{
+            "Sport":[],
+            "Formal":[],
+            "Casual_Sport":[],
+            "Casual":[],
+            "Casual_Formal":[]
+        },
+
+        "pattern":{
+            "Fur":[],
+            "Plain":[],
+            "Tartan":[],
+            "Graphic":[],
+            "Quilted":[],
+            "Knitted":[],
+            "Floral":[],
+            "Patterned":[],
+            "Striped":[]
+        },
+
+        "season":{
+            "Winter":[],
+            "Summer":[]
+        }
+    }
+}
