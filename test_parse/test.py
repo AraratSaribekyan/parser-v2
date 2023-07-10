@@ -28,14 +28,17 @@ def get_img_srcs_by_urls(urls):
     print(f"======================= {multiprocessing.current_process().pid} START ==========================")
     driver = None
     try:
+        driver = wd.Chrome(executable_path=DRIVER_PATH, options=options)
+        driver.maximize_window()
+        wait = WebDriverWait(driver, 5)
         for url in urls:
             try:
-                driver = wd.Chrome(executable_path=DRIVER_PATH, options=options)
-                driver.maximize_window()
-                wait = WebDriverWait(driver, 5)
                 driver.get(url=url)
                 wait.until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
 
+                color_button = driver.find_elements_by_xpath("//li[@class = 'pl0w2g _5qdMrS _2ZBgf']//button")
+                if len(color_button) != 0:
+                    color_button[0].click()
                 color_as = driver.find_elements_by_xpath("//li[@class = 'pl0w2g _5qdMrS _2ZBgf']//div//a")
                 color_hrefs = [i.get_attribute('href') for i in color_as]
 
@@ -122,28 +125,51 @@ def get_img_srcs_by_urls(urls):
 def get_page_by_url(url):
     driver = None
     try:
+        page=1
         driver = wd.Chrome(executable_path=DRIVER_PATH, options=options)
         driver.maximize_window()
         wait = WebDriverWait(driver, 5)
         driver.get(url=url)
         wait.until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
+        time.sleep(1)
+        while True:
+
+            print(f"==================== PAGE {page} START ==================\n")
+            url_divs = driver.find_elements_by_xpath("//div[@class = '_5qdMrS w8MdNG cYylcv BaerYO _75qWlu iOzucJ JT3_zV _Qe9k6']//div[@class = '']")
+            all_urls = [i.find_element_by_xpath(".//article//a").get_attribute("href") for i in url_divs]
+            print(len(all_urls))
+            url_dict = {}
+            for proc_num in range(N_PROCESSES):
+                url_dict[f"urls{proc_num}"] = [all_urls[i] for i in range(len(all_urls)) if i%N_PROCESSES==proc_num]
+            processes = []
+            for urls in url_dict:
+                # time.sleep(2)
+                process = multiprocessing.Process(target=get_img_srcs_by_urls, args=(url_dict[urls], ))
+                process.start()
+                processes.append(process)
+            for process in processes:
+                process.join()
+
+            del url_divs
+            del all_urls
+            del url_dict
+            del processes
+
+            print(f"==================== PAGE {page} END ==================\n")
+
+            next_button = driver.find_elements_by_xpath("//a[@title = 'next page']")
+            if len(next_button)==0:
+                break
+            else:
+                driver.get(next_button[0].get_attribute('href'))
+                wait.until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
+                page += 1
+                time.sleep(5)
+
+
     except Exception as ex:
         print(ex)
-    else:
-        url_divs = driver.find_elements_by_xpath("//div[@class = '_5qdMrS w8MdNG cYylcv BaerYO _75qWlu iOzucJ JT3_zV _Qe9k6']//div[@class = '']")
-        all_urls = [i.find_element_by_xpath(".//article//a").get_attribute("href") for i in url_divs]
-        url_dict = {}
-        for proc_num in range(N_PROCESSES):
-            url_dict[f"urls{proc_num}"] = [all_urls[i] for i in range(len(all_urls)) if i%N_PROCESSES==proc_num]
-        processes = []
-        for urls in url_dict:
-            time.sleep(2)
-            process = multiprocessing.Process(target=get_img_srcs_by_urls, args=(url_dict[urls], ))
-            process.start()
-            processes.append(process)
-        for process in processes:
-            process.join()
-        # get_img_srcs_by_urls(all_urls)
+
     finally:
         if driver is not None:
             driver.quit()
