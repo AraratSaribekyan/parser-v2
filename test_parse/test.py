@@ -8,6 +8,7 @@ from selenium.common.exceptions import MoveTargetOutOfBoundsException
 import os
 import time
 import threading
+import multiprocessing
 
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.50 Safari/537.36"
 DRIVER_PATH = "/home/anubis/Desktop/parser v2/chromedriver"
@@ -24,7 +25,7 @@ options.add_argument("--no-sandbox")
 options.add_argument("--window-size=1920,1080")
 
 def get_img_srcs_by_urls(urls):
-    print(f"======================= {threading.get_ident()} START ==========================")
+    print(f"======================= {multiprocessing.current_process().pid} START ==========================")
     driver = None
     try:
         for url in urls:
@@ -115,7 +116,7 @@ def get_img_srcs_by_urls(urls):
     finally:
         if driver is not None:
             driver.quit()
-        print(f"======================= {threading.get_ident()} END  ==========================")
+        print(f"======================= {multiprocessing.current_process().pid} END  ==========================")
 
 
 def get_page_by_url(url):
@@ -134,14 +135,14 @@ def get_page_by_url(url):
         url_dict = {}
         for proc_num in range(N_PROCESSES):
             url_dict[f"urls{proc_num}"] = [all_urls[i] for i in range(len(all_urls)) if i%N_PROCESSES==proc_num]
-        threads = []
+        processes = []
         for urls in url_dict:
             time.sleep(2)
-            thread = threading.Thread(target=get_img_srcs_by_urls, args=(url_dict[urls], ))
-            thread.start()
-            threads.append(thread)
-        for thread in threads:
-            thread.join()
+            process = multiprocessing.Process(target=get_img_srcs_by_urls, args=(url_dict[urls], ))
+            process.start()
+            processes.append(process)
+        for process in processes:
+            process.join()
         # get_img_srcs_by_urls(all_urls)
     finally:
         if driver is not None:
